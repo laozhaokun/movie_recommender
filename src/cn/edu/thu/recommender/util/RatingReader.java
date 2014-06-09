@@ -39,18 +39,4 @@ public class RatingReader {
 		return null;
 	}
 	
-	/**
-	 * 读取给定电影的评分数据
-	 *@return  [itemid -> {userid -> rating}]
-	 */
-	public ArrayList<HashMap<Integer, Integer>> readItemUserRatings(int itemid) throws SQLException{
-		ArrayList<HashMap<Integer, Integer>> preferences = new ArrayList<HashMap<Integer, Integer>>();
-		List<Rating> list = sq.getRatings(itemid);
-		for(Rating r : list){
-			HashMap<Integer, Integer> ratings = new HashMap<Integer, Integer>();
-		    ratings.put(r.getUserid(), r.getRating());
-		    preferences.set(r.getItemid(), ratings);
-		}
-		return preferences;
-	}
 }
