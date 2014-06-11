@@ -1,0 +1,60 @@
+#index{
+ align:center;
+}
+
+td {
+	text-align: center;
+	border:solid #000 1px;
+}
+
+body,h1,h2,h3,h4,h6,p,ul,li,pre,form,input {
+	margin: 0;
+	padding: 0
+}
+
+h2 {
+	text-align: center;
+	color: #8B008B;
+}
+
+tr {
+	background: #FFFFFF;
+}
+
+tr:nth-child(2n) {
+	background: #ccc;
+}
+
+tr {
+	background-color: expression(( this.sectionRowIndex % 2 == 0)?   "#FFFFFF":
+		
+		
+		 "#ccc");
+}
+
+#body {
+	width: 100%;
+	overflow:hidden;
+}
+
+table{
+	border-collapse:collapse;border:none;
+}
+
+.left,.right {
+	float: left;
+}
+
+
+.left {
+	width: 49%;
+	border-right: 1px solid #8B008B
+}
+
+.right {
+	width: 50%
+}
+
+.footer {
+	border-top: 1px solid #ECECEC;
+}
