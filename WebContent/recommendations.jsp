@@ -11,17 +11,24 @@
 <title>The recommendations</title>
 </head>
 <body>
-<a href="index.jsp">回首页</a>
+<div id="header">
+	<p>
+		<a href="index.jsp">A simple Sentiment Detection System</a>
+	</p>
+</div>
 	<div id="body">
 		<div class="left">
 			<h2>Your reviewed movies</h2>
+			<br/>
 			<table border="1">
 				<tr>
+					<td>No.</td>
 					<td>Movie Name</td>
 					<td>Your Score</td>
 				</tr>
-				<c:forEach var="item" items="${usermovielist}">
+				<c:forEach var="item" items="${usermovielist}" varStatus="i">
 					<tr>
+						<td>${i.count}</td>
 						<td>${item.title}</td>
 						<td>${item.score}</td>
 					</tr>
@@ -29,14 +36,17 @@
 			</table>
 		</div>
 		<div class="right">
-			<h2>Recommend movies to you</h2>
+			<h2>Recommend these movies to you</h2>
+			<br/>
 			<table border="1" align="center">
 				<tr>
+					<td>No.</td>
 					<td>Movie Name</td>
 					<td>Predict Score</td>
 				</tr>
-				<c:forEach var="item" items="${recommendedmovielist}">
+				<c:forEach var="item" items="${recommendedmovielist}" varStatus="i">
 					<tr>
+						<td>${i.count}</td>
 						<td>${item.title}</td>
 						<td>${item.score}</td>
 					</tr>

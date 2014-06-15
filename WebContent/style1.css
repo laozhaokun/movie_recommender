@@ -1,0 +1,34 @@
+body,h1,h2,h3,h4,h6,p,ul,li,pre,form,input {
+	margin: 0;
+	padding: 0
+}
+#header{
+	width:100%;
+	height:100px;
+}
+#header p{
+	text-align:center;
+	font-size:35px;
+}
+#content{
+	width:100%;
+	height:200px;
+	text-align:center;
+	border-top: 20px solid #FFF;
+}
+a{
+	text-decoration: none;
+	color: #4B0082;
+}
+a:hover{
+	text-decoration: underline;
+	color: #0055A6;
+}
+a:focus{
+	outline: 0;
+	-moz-outline: 0
+}
+.footer {
+	text-align:center;
+	border-top: 200px solid #FFF;
+}

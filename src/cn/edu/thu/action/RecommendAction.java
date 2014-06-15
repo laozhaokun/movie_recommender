@@ -1,5 +1,6 @@
 package cn.edu.thu.action;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class RecommendAction extends ActionSupport{
 	private ArrayList<Movie> usermovielist;
 	RecommendService service = new RecommendService();
 	
-	public String getRecommendation() throws TasteException, SQLException{
+	public String getRecommendation() throws TasteException, SQLException, IOException{
 		usermovielist = service.getMovieInfoList(userid);
 		if(method.equals("mahout_userbased")){
 			List<RecommendedItem> list = new UserBasedRecommender().recommend(userid,size);

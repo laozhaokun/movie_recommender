@@ -52,7 +52,7 @@ public class SQLUtil {
     public List<Rating> getRatings(int userid) throws SQLException {
         db.openConnection();
         String query = "select userid,itemid,rating from ratings where userid = "
-                + userid;
+                + userid + " order by rating desc ";
         ResultSet rs = db.queryDB(query);
         List<Rating> list = new ArrayList<Rating>();
         while (rs.next()) {
@@ -244,7 +244,7 @@ public class SQLUtil {
         db.openConnection();
         String query = " select r.itemid,r.rating,i.title from "
         		+ "ratings r,items i where r.itemid= i.itemid and r.userid= "
-                + userid;
+                + userid + " order by r.rating desc ";
         ResultSet rs = db.queryDB(query);
         ArrayList<Movie> movielist = new ArrayList<Movie>();
         while (rs.next()) {
